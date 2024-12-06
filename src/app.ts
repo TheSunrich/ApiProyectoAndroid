@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import noteRouter from './routes/noteRouter';
+import indexRouter from './routes/indexRouter';
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use(cors({
 
 // Middlewares
 app.use(express.json());
+app.use('/', indexRouter);
 app.use('/notes', noteRouter)
 
 app.listen(PORT, () => {
