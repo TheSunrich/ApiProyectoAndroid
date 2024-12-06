@@ -8,6 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
 const noteRouter_1 = __importDefault(require("./routes/noteRouter"));
+const indexRouter_1 = __importDefault(require("./routes/indexRouter"));
 const app = (0, express_1.default)();
 dotenv_1.default.config();
 // Conectar a MongoDB
@@ -26,6 +27,7 @@ app.use((0, cors_1.default)({
 }));
 // Middlewares
 app.use(express_1.default.json());
+app.use('/', indexRouter_1.default);
 app.use('/notes', noteRouter_1.default);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

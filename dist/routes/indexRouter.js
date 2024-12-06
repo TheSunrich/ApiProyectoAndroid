@@ -8,4 +8,5 @@ const router = express_1.default.Router();
 router.get("/", (req, res) => {
     res.send("API Successfully working");
 });
+exports.default = router;
 //# sourceMappingURL=indexRouter.js.map
