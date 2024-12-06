@@ -6,7 +6,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Directorio de salida de TypeScript
-dist/
+
 build/
 
 # Archivos específicos de TypeScript
